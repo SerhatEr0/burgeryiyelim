@@ -1,0 +1,25 @@
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import Menu from "./components/Menu";
+import Contact from "./components/Contact";
+import About from "./components/About";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+function App() {
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/menu" exact element={<Menu />} />
+        <Route path="/contact" exact element={<Contact />} />
+        <Route path="/about" exact element={<About />} />
+      </Routes>
+      <Footer />
+    </>
+  );
+}
+
+export default App;
